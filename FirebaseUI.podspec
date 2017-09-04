@@ -111,7 +111,7 @@ Pod::Spec.new do |s|
     databasesrc.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
     databasesrc.platform = :ios, '8.0'
 
-    databasesrc.ios.source_files = 'FirebaseDatabaseUI/*.[h,m]'
+    databasesrc.ios.source_files = 'FirebaseDatabaseUI/**/*.[h,m]'
     databasesrc.ios.public_header_files = 'FirebaseDatabaseUI/*.h'
 
     databasesrc.dependency 'Firebase/Database', '~> 4.0'
@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
     storagesrc.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
     storagesrc.platform = :ios, '8.0'
     
-    storagesrc.ios.source_files = 'FirebaseStorageUI/*.[h,m]'
+    storagesrc.ios.source_files = 'FirebaseStorageUI/**/*.[h,m]'
     storagesrc.ios.public_header_files = 'FirebaseStorageUI/*.h'
 
     storagesrc.dependency 'Firebase/Storage', '~> 4.0'
@@ -134,11 +134,12 @@ Pod::Spec.new do |s|
     authsrc.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
     authsrc.platform = :ios, '8.0'
     
-    authsrc.ios.source_files = 'FirebaseAuthUI/*.[h,m,xib]'
+    authsrc.ios.source_files = 'FirebaseAuthUI/*.[h,m]'
     authsrc.ios.public_header_files = 'FirebaseAuthUI/*.h'
     authsrc.resource_bundle = {
-      'FirebaseAuthUISrc' => ['FirebaseAuthUI/*.lproj',
-                           'FirebaseAuthUI/*.png']
+      'FirebaseAuthUISrc' => ['FirebaseAuthUI/**/*.lproj',
+                              'FirebaseAuthUI/**/*.png',
+                              'FirebaseAuthUI/**/*.xib']
     }
 
     authsrc.dependency 'Firebase/Auth', '~> 4.0'
@@ -149,11 +150,12 @@ Pod::Spec.new do |s|
     facebooksrc.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
     facebooksrc.platform = :ios, '8.0'
     
-    facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/*.[h,m]'
+    facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
     facebooksrc.ios.public_header_files = 'FirebaseFacebookAuthUI/*.h'
     facebooksrc.resource_bundle = {
-      'FirebaseFacebookAuthUISrc' => ['FirebaseFacebookAuthUI/*.lproj',
-                                   'FirebaseFacebookAuthUI/*.png']
+      'FirebaseFacebookAuthUISrc' => ['FirebaseFacebookAuthUI/**/*.lproj',
+                                      'FirebaseFacebookAuthUI/**/*.png',
+                                      'FirebaseFacebookAuthUI/**/*.xib']
     }
 
     facebooksrc.dependency 'FirebaseUI/Auth'
@@ -165,11 +167,12 @@ Pod::Spec.new do |s|
     googlesrc.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
     googlesrc.platform = :ios, '8.0'
     
-    googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/*.[h,m]'
-    googlesrc.ios.public_header_files = 'FirebaseGoogleAuthUI/*.h'
+    googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
+    googlesrc.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h'
     googlesrc.resource_bundle = {
-      'FirebaseGoogleAuthUISrc' => ['FirebaseGoogleAuthUI/*.lproj',
-                                 'FirebaseGoogleAuthUI/*.png']
+      'FirebaseGoogleAuthUISrc' => ['FirebaseGoogleAuthUI/**/*.lproj',
+                                    'FirebaseGoogleAuthUI/**/*.png'
+                                    'FirebaseGoogleAuthUI/**/*.xib']
     }
 
     googlesrc.dependency 'FirebaseUI/Auth'
@@ -181,12 +184,13 @@ Pod::Spec.new do |s|
     phonesrc.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
     phonesrc.platform = :ios, '8.0'
     
-    phonesrc.ios.source_files = 'FirebasePhoneAuthUI/*.[h,m]'
-    phonesrc.ios.public_header_files = 'FirebasePhoneAuthUI/*.h'
+    phonesrc.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
+    phonesrc.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h'
     phonesrc.resource_bundle = {
-      'FirebasePhoneAuthUISrc' => ['FirebasePhoneAuthUI/*.lproj',
-                                'FirebasePhoneAuthUI/*.png',
-                                'FirebasePhoneAuthUI/*.json']
+      'FirebasePhoneAuthUISrc' => ['FirebasePhoneAuthUI/**/*.lproj',
+                                   'FirebasePhoneAuthUI/**/*.png',
+                                   'FirebasePhoneAuthUI/**/*.json',
+                                   'FirebasePhoneAuthUI/**/*.xib']
     }
 
     phonesrc.dependency 'FirebaseUI/Auth'
@@ -197,11 +201,12 @@ Pod::Spec.new do |s|
     twittersrc.license = { :type => 'Apache 2.0', :file => 'LICENSE' }
     twittersrc.platform = :ios, '8.0'
 
-    twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/*.[h,m]'
-    twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/*.h'
+    twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
+    twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
     twittersrc.resource_bundle = {
-      'FirebaseTwitterAuthUISrc' => ['FirebaseTwitterAuthUI/*.lproj',
-                                  'FirebaseTwitterAuthUI/*.png']
+      'FirebaseTwitterAuthUISrc' => ['FirebaseTwitterAuthUI/**/*.lproj',
+                                     'FirebaseTwitterAuthUI/**/*.png',
+                                     'FirebaseTwitterAuthUI/**/*.xib']
     }
 
     twittersrc.dependency 'FirebaseUI/Auth'
