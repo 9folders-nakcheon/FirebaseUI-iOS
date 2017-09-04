@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   # src
   ####################################################################################################################################
   s.subspec 'Databasesrc' do |databasesrc|
-    databasesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    #databasesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
     databasesrc.platform = :ios, '8.0'
 
     databasesrc.ios.source_files = 'FirebaseDatabaseUI/*.[h,m]'
@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Storagesrc' do |storagesrc|
-    storagesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    #storagesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
     storagesrc.platform = :ios, '8.0'
     
     storagesrc.ios.source_files = 'FirebaseStorageUI/*.[h,m]'
@@ -128,7 +128,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Authsrc' do |authsrc|
-    authsrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    #authsrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
     authsrc.platform = :ios, '8.0'
     
     authsrc.ios.source_files = 'FirebaseAuthUI/*.[h,m,xib]'
@@ -142,7 +142,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Facebooksrc' do |facebooksrc|
-    facebooksrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    #facebooksrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
     facebooksrc.platform = :ios, '8.0'
     
     facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/*.[h,m]'
@@ -157,7 +157,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Googlesrc' do |googlesrc|
-    googlesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    #googlesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
     googlesrc.platform = :ios, '8.0'
     
     googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/*.[h,m]'
@@ -172,7 +172,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Phonesrc' do |phonesrc|
-    phonesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    #phonesrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
     phonesrc.platform = :ios, '8.0'
     
     phonesrc.ios.source_files = 'FirebasePhoneAuthUI/*.[h,m]'
@@ -187,7 +187,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Twittersrc' do |twittersrc|
-    twittersrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    #twittersrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
+    phonesrc.platform = :ios, '8.0'
     
     twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/*.[h,m]'
     twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/*.h'
