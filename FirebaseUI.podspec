@@ -136,11 +136,7 @@ Pod::Spec.new do |s|
     
     authsrc.ios.source_files = 'FirebaseAuthUI/*.[h,m]'
     authsrc.ios.public_header_files = 'FirebaseAuthUI/*.h'
-    authsrc.resource_bundle = {
-      'FirebaseAuthUISrc' => ['FirebaseAuthUI/**/*.lproj',
-                              'FirebaseAuthUI/**/*.png',
-                              'FirebaseAuthUI/**/*.xib']
-    }
+    authsrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
     authsrc.dependency 'Firebase/Auth', '~> 4.0'
   end
@@ -152,11 +148,7 @@ Pod::Spec.new do |s|
     
     facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
     facebooksrc.ios.public_header_files = 'FirebaseFacebookAuthUI/*.h'
-    facebooksrc.resource_bundle = {
-      'FirebaseFacebookAuthUISrc' => ['FirebaseFacebookAuthUI/**/*.lproj',
-                                      'FirebaseFacebookAuthUI/**/*.png',
-                                      'FirebaseFacebookAuthUI/**/*.xib']
-    }
+    facebooksrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
     facebooksrc.dependency 'FirebaseUI/Auth'
     facebooksrc.dependency 'FBSDKLoginKit', '~> 4.0'
@@ -169,11 +161,7 @@ Pod::Spec.new do |s|
     
     googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
     googlesrc.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h'
-    googlesrc.resource_bundle = {
-      'FirebaseGoogleAuthUISrc' => ['FirebaseGoogleAuthUI/**/*.lproj',
-                                    'FirebaseGoogleAuthUI/**/*.png'
-                                    'FirebaseGoogleAuthUI/**/*.xib']
-    }
+    googlesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
     googlesrc.dependency 'FirebaseUI/Auth'
     googlesrc.dependency 'GoogleSignIn', '~> 4.0'
@@ -186,12 +174,7 @@ Pod::Spec.new do |s|
     
     phonesrc.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
     phonesrc.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h'
-    phonesrc.resource_bundle = {
-      'FirebasePhoneAuthUISrc' => ['FirebasePhoneAuthUI/**/*.lproj',
-                                   'FirebasePhoneAuthUI/**/*.png',
-                                   'FirebasePhoneAuthUI/**/*.json',
-                                   'FirebasePhoneAuthUI/**/*.xib']
-    }
+    phonesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj", "FirebaseAuthUI/*.json"
 
     phonesrc.dependency 'FirebaseUI/Auth'
   end
@@ -203,11 +186,7 @@ Pod::Spec.new do |s|
 
     twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
     twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
-    twittersrc.resource_bundle = {
-      'FirebaseTwitterAuthUISrc' => ['FirebaseTwitterAuthUI/**/*.lproj',
-                                     'FirebaseTwitterAuthUI/**/*.png',
-                                     'FirebaseTwitterAuthUI/**/*.xib']
-    }
+    twittersrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
     twittersrc.dependency 'FirebaseUI/Auth'
     twittersrc.dependency 'TwitterKit', '~> 3.0'
