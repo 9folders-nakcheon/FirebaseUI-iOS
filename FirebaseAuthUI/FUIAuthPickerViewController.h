@@ -24,6 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
     @brief The view controller that displays sign in options to the user.
  */
 @interface FUIAuthPickerViewController : FUIAuthBaseViewController
+@property (assign, nonatomic) BOOL hideNavigationBar;
+@property (assign, nonatomic) BOOL hideCancelButton;
+
+- (void)configure;
 
 @end
 
