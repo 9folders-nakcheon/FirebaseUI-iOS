@@ -144,6 +144,7 @@ Pod::Spec.new do |s|
     facebooksrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
     facebooksrc.dependency 'FirebaseUI/Authsrc'
+    facebooksrc.dependency 'FirebaseAuth'
     facebooksrc.dependency 'FBSDKLoginKit', '~> 4.0'
   end
 
@@ -155,6 +156,7 @@ Pod::Spec.new do |s|
     googlesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
     googlesrc.dependency 'FirebaseUI/Authsrc'
+    googlesrc.dependency 'FirebaseAuth'
     googlesrc.dependency 'GoogleSignIn', '~> 4.0'
   end
 
@@ -166,6 +168,7 @@ Pod::Spec.new do |s|
     phonesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj", "FirebaseAuthUI/*.json"
 
     phonesrc.dependency 'FirebaseUI/Authsrc'
+    phonesrc.dependency 'FirebaseAuth'
   end
 
   s.subspec 'Twittersrc' do |twittersrc|
@@ -176,6 +179,7 @@ Pod::Spec.new do |s|
     twittersrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
     twittersrc.dependency 'FirebaseUI/Authsrc'
+    twittersrc.dependency 'FirebaseAuth'
     twittersrc.dependency 'TwitterKit', '~> 3.0'
     twittersrc.platform = :ios, '9.0'
   end
