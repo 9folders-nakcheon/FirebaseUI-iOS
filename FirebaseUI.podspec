@@ -188,7 +188,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Twittersrc' do |twittersrc|
     #twittersrc.source = { :git => 'https://github.com/9folders-nakcheon/FirebaseUI-iOS.git', :branch => 'feature/ncjung_add_sourceincoude_to_cocoapod_spec' }
-    phonesrc.platform = :ios, '8.0'
+    twittersrc.platform = :ios, '8.0'
     
     twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/*.[h,m]'
     twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/*.h'
