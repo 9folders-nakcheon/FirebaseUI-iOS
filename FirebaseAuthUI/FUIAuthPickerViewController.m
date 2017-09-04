@@ -23,7 +23,6 @@
 #import "FUIAuthUtils.h"
 #import "FUIAuth_Internal.h"
 #import "FUIEmailEntryViewController.h"
-#import "IXAppManager.h"
 
 /** @var kErrorUserInfoEmailKey
  @brief The key for the email address in the userinfo dictionary of a sign in error.
@@ -154,7 +153,7 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    DDLogVerbose(@"%s", __PRETTY_FUNCTION__);
+    //NSLog(@"%s", __PRETTY_FUNCTION__);
     
     // navigation bar
     if (self.hideNavigationBar) {
@@ -184,7 +183,7 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
     // back button event
     if (!parent) {
         // WARNING: 정확한 순간에 호출되지 않음
-        DDLogVerbose(@"%s", __PRETTY_FUNCTION__);
+        //NSLog(@"%s", __PRETTY_FUNCTION__);
     }
 }
 
@@ -193,18 +192,18 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
     // back button event
     if (!parent) {
         // WARNING: 정확한 순간에 호출되지 않음
-        DDLogVerbose(@"%s", __PRETTY_FUNCTION__);
+        //NSLog(@"%s", __PRETTY_FUNCTION__);
     }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    DDLogVerbose(@"%s", __PRETTY_FUNCTION__);
+    //NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (BOOL)canPerformUnwindSegueAction:(SEL)action fromViewController:(UIViewController *)fromViewController withSender:(id)sender
 {
-    DDLogVerbose(@"%s", __PRETTY_FUNCTION__);
+    //NSLog(@"%s", __PRETTY_FUNCTION__);
     
     if (![super canPerformAction:action withSender:self]) {
         return NO;
@@ -219,7 +218,7 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
 
 - (IBAction)prepareForUnwindToFirebaseAuthPickerView:(UIStoryboardSegue *)segue
 {
-    DDLogVerbose(@"%s", __PRETTY_FUNCTION__);
+    //NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 
