@@ -138,42 +138,42 @@ Pod::Spec.new do |s|
   s.subspec 'FirebaseFacebookAuthUI' do |ss|
     ss.platform = :ios, '8.0'
     
-    ss.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
-    ss.ios.public_header_files = 'FirebaseFacebookAuthUI/**/*.h'
+    ss.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]', 'FirebaseAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseFacebookAuthUI/**/*.h', 'FirebaseAuthUI/**/*.h'
     ss.resources = "FirebaseFacebookAuthUI/**/*.png", 'FirebaseFacebookAuthUI/**/*.xib', "FirebaseFacebookAuthUI/*.lproj"
 
-    ss.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'Firebase/Auth'
     ss.dependency 'FBSDKLoginKit'
   end
 
   s.subspec 'FirebaseGoogleAuthUI' do |ss|
     ss.platform = :ios, '8.0'
     
-    ss.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
-    ss.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h'
+    ss.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]', 'FirebaseAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h', 'FirebaseAuthUI/**/*.h'
     ss.resources = "FirebaseGoogleAuthUI/**/*.png", 'FirebaseGoogleAuthUI/**/*.xib', "FirebaseGoogleAuthUI/*.lproj"
 
-    ss.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'Firebase/Auth'
     ss.dependency 'GoogleSignIn'
   end
 
   s.subspec 'FirebasePhoneAuthUI' do |ss|
     ss.platform = :ios, '8.0'
     
-    ss.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
-    ss.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h'
+    ss.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]', 'FirebaseAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h', 'FirebaseAuthUI/**/*.h'
     ss.resources = "FirebasePhoneAuthUI/**/*.png", 'FirebasePhoneAuthUI/**/*.xib', "FirebasePhoneAuthUI/*.lproj", "FirebasePhoneAuthUI/*.json"
 
-    ss.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'Firebase/Auth'
   end
 
   s.subspec 'FirebaseTwitterAuthUI' do |ss|
     ss.platform = :ios, '9.0'
-    ss.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
-    ss.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
+    ss.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]', 'FirebaseAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h', 'FirebaseAuthUI/**/*.h'
     ss.resources = "FirebaseTwitterAuthUI/**/*.png", 'FirebaseTwitterAuthUI/**/*.xib', "FirebaseTwitterAuthUI/*.lproj"
 
-    ss.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'Firebase/Auth'
     ss.dependency 'TwitterKit', '~> 3.0'
   end
 

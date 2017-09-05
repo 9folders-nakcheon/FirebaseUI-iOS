@@ -17,7 +17,7 @@
 #import "FUIViewController.h"
 
 #import <FirebaseAuth/FirebaseAuth.h>
-#import <FirebaseAuthUI/FirebaseAuthUI.h>
+#import "FirebaseAuthUI.h"
 #import <FirebaseCore/FIRApp.h>
 #import <FirebaseFacebookAuthUI/FirebaseFacebookAuthUI.h>
 #import <FirebaseGoogleAuthUI/FirebaseGoogleAuthUI.h>

@@ -16,8 +16,8 @@
 
 #import "FUITwitterAuth.h"
 #import <FirebaseAuth/FIRTwitterAuthProvider.h>
-#import <FirebaseAuthUI/FUIAuthBaseViewController.h>
-#import <FirebaseAuthUI/FUIAuthErrorUtils.h>
+#import "FUIAuthBaseViewController.h"
+#import "FUIAuthErrorUtils.h"
 #import <TwitterKit/TwitterKit.h>
 #import "FUIAuthBaseViewController_Internal.h"
 #import "FUIAuthStrings.h"

@@ -19,9 +19,9 @@
 #import <FirebaseAuth/FIRAuth.h>
 #import <FirebaseAuth/FIRGoogleAuthProvider.h>
 #import <FirebaseAuth/FIRUserInfo.h>
-#import <FirebaseAuthUI/FUIAuthBaseViewController.h>
-#import <FirebaseAuthUI/FUIAuthErrorUtils.h>
-#import <FirebaseAuthUI/FirebaseAuthUI.h>
+#import "FUIAuthBaseViewController.h"
+#import "FUIAuthErrorUtils.h"
+#import "FirebaseAuthUI.h"
 #import <FirebaseCore/FirebaseCore.h>
 #import <GoogleSignIn/GoogleSignIn.h>
 #import "FUIAuthBaseViewController_Internal.h"
@@ -184,7 +184,7 @@ didSignInForUser:(GIDGoogleUser *)user
     signIn.delegate = self;
     signIn.uiDelegate = self;
     signIn.shouldFetchBasicProfile = YES;
-    _DLog(@"[[FIRApp defaultApp] options].clientID = %@", [[FIRApp defaultApp] options].clientID);
+    //_DLog(@"[[FIRApp defaultApp] options].clientID = %@", [[FIRApp defaultApp] options].clientID);
     signIn.clientID = [[FIRApp defaultApp] options].clientID;
     signIn.scopes = _scopes;
     return signIn;

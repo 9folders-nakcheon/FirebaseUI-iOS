@@ -17,8 +17,8 @@
 
 #import "FUITwitterAuth.h"
 #import <FirebaseAuth/FirebaseAuth.h>
-#import <FirebaseAuthUI/FUIAuthErrorUtils.h>
-#import <FirebaseAuthUI/FUIAuthUtils.h>
+#import "FUIAuthErrorUtils.h"FUIAuthErrorUtils.h>
+#import "FUIAuthErrorUtils.h"FUIAuthUtils.h>
 #import <FirebaseCore/FirebaseCore.h>
 #import <FirebaseTwitterAuthUI/FirebaseTwitterAuthUI.h>
 #import <OCMock/OCMock.h>
