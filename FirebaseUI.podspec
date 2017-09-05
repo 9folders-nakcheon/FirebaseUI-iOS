@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   # src
   ####################################################################################################################################
   s.subspec 'Databasesrc' do |databasesrc|
-  
+    use_frameworks!
     databasesrc.platform = :ios, '8.0'
 
     databasesrc.ios.source_files = 'FirebaseDatabaseUI/**/*.[h,m]'
@@ -117,6 +117,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Storagesrc' do |storagesrc|
+    use_frameworks!
     storagesrc.platform = :ios, '8.0'
     
     storagesrc.ios.source_files = 'FirebaseStorageUI/**/*.[h,m]'
@@ -127,6 +128,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Authsrc' do |authsrc|
+    use_frameworks!
     authsrc.platform = :ios, '8.0'
     
     authsrc.ios.source_files = 'FirebaseAuthUI/**/*.[h,m]'
@@ -137,6 +139,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Facebooksrc' do |facebooksrc|
+    use_frameworks!
     facebooksrc.platform = :ios, '8.0'
     
     facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
@@ -149,6 +152,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Googlesrc' do |googlesrc|
+    use_frameworks!
     googlesrc.platform = :ios, '8.0'
     
     googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
@@ -161,6 +165,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Phonesrc' do |phonesrc|
+    use_frameworks!
     phonesrc.platform = :ios, '8.0'
     
     phonesrc.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
@@ -172,6 +177,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Twittersrc' do |twittersrc|
+    use_frameworks!
     twittersrc.platform = :ios, '8.0'
 
     twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
