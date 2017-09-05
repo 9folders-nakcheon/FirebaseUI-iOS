@@ -146,15 +146,15 @@ Pod::Spec.new do |s|
     facebooksrc.dependency 'FBSDKLoginKit', '~> 4.0'
   end
 
-  s.subspec 'FirebaseGoogleAuthUI' do |googlesrc|
-    googlesrc.platform = :ios, '8.0'
+  s.subspec 'FirebaseGoogleAuthUI' do |ss|
+    ss.platform = :ios, '8.0'
     
-    googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
-    googlesrc.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h'
-    googlesrc.resources = "FirebaseGoogleAuthUI/**/*.png", 'FirebaseGoogleAuthUI/**/*.xib', "FirebaseGoogleAuthUI/*.lproj"
+    ss.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h'
+    ss.resources = "FirebaseGoogleAuthUI/**/*.png", 'FirebaseGoogleAuthUI/**/*.xib', "FirebaseGoogleAuthUI/*.lproj"
 
-    googlesrc.dependency 'FirebaseUI/FirebaseAuthUI'
-    googlesrc.dependency 'GoogleSignIn', '~> 4.0'
+    ss.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'GoogleSignIn', '~> 4.0'
   end
 
   s.subspec 'FirebasePhoneAuthUI' do |phonesrc|
