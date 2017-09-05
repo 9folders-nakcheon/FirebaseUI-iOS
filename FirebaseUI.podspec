@@ -21,14 +21,13 @@ Pod::Spec.new do |s|
     all.dependency 'FirebaseUI/Facebook'
     all.dependency 'FirebaseUI/Google'
     all.dependency 'FirebaseUI/Phone'
-    all.dependency 'FirebaseUI/Twittersrc'
-    all.dependency 'FirebaseUI/Databasesrc'
-    all.dependency 'FirebaseUI/Storagesrc'
+    all.dependency 'FirebaseUI/FirebaseDatabaseUI'
+    all.dependency 'FirebaseUI/FirebaseStorageUI'
     all.dependency 'FirebaseUI/FirebaseAuthUI'
-    all.dependency 'FirebaseUI/Facebooksrc'
-    all.dependency 'FirebaseUI/Googlesrc'
-    all.dependency 'FirebaseUI/Phonesrc'
-    all.dependency 'FirebaseUI/Twittersrc'
+    all.dependency 'FirebaseUI/FirebaseFacebookAuthUI'
+    all.dependency 'FirebaseUI/FirebaseGoogleAuthUI'
+    all.dependency 'FirebaseUI/FirebasePhoneAuthUI'
+    all.dependency 'FirebaseUI/FirebaseTwitterAuthUI'
   end
 
   s.subspec 'Database' do |database|
@@ -106,7 +105,7 @@ Pod::Spec.new do |s|
   ####################################################################################################################################
   # src
   ####################################################################################################################################
-  s.subspec 'Databasesrc' do |databasesrc|
+  s.subspec 'FirebaseDatabaseUI' do |databasesrc|
   
     databasesrc.platform = :ios, '8.0'
 
@@ -116,7 +115,7 @@ Pod::Spec.new do |s|
     databasesrc.dependency 'Firebase/Database', '~> 4.0'
   end
 
-  s.subspec 'Storagesrc' do |storagesrc|
+  s.subspec 'FirebaseStorageUI' do |storagesrc|
     storagesrc.platform = :ios, '8.0'
     
     storagesrc.ios.source_files = 'FirebaseStorageUI/**/*.[h,m]'
@@ -136,7 +135,7 @@ Pod::Spec.new do |s|
     authsrc.dependency 'Firebase/Auth', '~> 4.0'
   end
 
-  s.subspec 'Facebooksrc' do |facebooksrc|
+  s.subspec 'FirebaseFacebookAuthUI' do |facebooksrc|
     facebooksrc.platform = :ios, '8.0'
     
     facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
@@ -147,7 +146,7 @@ Pod::Spec.new do |s|
     facebooksrc.dependency 'FBSDKLoginKit', '~> 4.0'
   end
 
-  s.subspec 'Googlesrc' do |googlesrc|
+  s.subspec 'FirebaseGoogleAuthUI' do |googlesrc|
     googlesrc.platform = :ios, '8.0'
     
     googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
@@ -158,7 +157,7 @@ Pod::Spec.new do |s|
     googlesrc.dependency 'GoogleSignIn', '~> 4.0'
   end
 
-  s.subspec 'Phonesrc' do |phonesrc|
+  s.subspec 'FirebasePhoneAuthUI' do |phonesrc|
     phonesrc.platform = :ios, '8.0'
     
     phonesrc.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
@@ -168,7 +167,7 @@ Pod::Spec.new do |s|
     phonesrc.dependency 'FirebaseUI/FirebaseAuthUI'
   end
 
-  s.subspec 'Twittersrc' do |twittersrc|
+  s.subspec 'FirebaseTwitterAuthUI' do |twittersrc|
     twittersrc.platform = :ios, '9.0'
     twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
     twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
