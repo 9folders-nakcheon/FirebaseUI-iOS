@@ -106,38 +106,41 @@ NSString *const kStr_PlaceholderNewPassword = @"PlaceholderNewPassword";
 NSString *const kStr_ForgotPasswordTitle = @"ForgotPasswordTitle";
 
 /** @var kKeyNotFound
-    @brief The value returned if the key is not found in the table.
+ @brief The value returned if the key is not found in the table.
  */
 NSString *const kKeyNotFound = @"KeyNotFound";
 
 /** @var kTableName
-    @brief The name of the strings table to search for localized strings.
+ @brief The name of the strings table to search for localized strings.
  */
 NSString *const kTableName = @"FirebaseAuthUI";
 
 NSString *FUILocalizedString(NSString *key) {
-  return FUILocalizedStringFromTable(key, kTableName);
+    return FUILocalizedStringFromTable(key, kTableName);
 }
 
 NSString *FUILocalizedStringFromTable(NSString *key, NSString *table) {
-  return FUILocalizedStringFromTableInBundle(key, table, kTableName);
+    return FUILocalizedStringFromTableInBundle(key, table, kTableName);
 }
 
 NSString *FUILocalizedStringFromTableInBundle(NSString *key,
                                               NSString *table,
                                               NSString *_Nullable bundleName) {
-  
-  NSBundle *customStringsBundle = [FUIAuth defaultAuthUI].customStringsBundle;
-  if (customStringsBundle) {
-    NSString *localizedString = [customStringsBundle localizedStringForKey:key
-                                                                     value:kKeyNotFound
-                                                                     table:table];
-    if (![kKeyNotFound isEqual:localizedString]) {
-      return localizedString;
+    
+    NSBundle *customStringsBundle = [FUIAuth defaultAuthUI].customStringsBundle;
+    if (customStringsBundle) {
+        NSString *localizedString = [customStringsBundle localizedStringForKey:key
+                                                                         value:kKeyNotFound
+                                                                         table:table];
+        if (![kKeyNotFound isEqual:localizedString]) {
+            return localizedString;
+        }
     }
-  }
-  NSBundle *frameworkBundle = [FUIAuthUtils bundleNamed:bundleName];
-  return [frameworkBundle localizedStringForKey:key value:nil table:table];
+    NSBundle *frameworkBundle = [FUIAuthUtils bundleNamed:bundleName];
+    if (!frameworkBundle.isLoaded) {
+        return [[NSBundle mainBundle] localizedStringForKey:key value:nil table:table];
+    }
+    return [frameworkBundle localizedStringForKey:key value:nil table:table];
 }
 
 NS_ASSUME_NONNULL_END
