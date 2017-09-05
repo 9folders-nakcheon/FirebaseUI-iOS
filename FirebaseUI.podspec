@@ -140,7 +140,7 @@ Pod::Spec.new do |s|
     
     facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
     facebooksrc.ios.public_header_files = 'FirebaseFacebookAuthUI/**/*.h'
-    facebooksrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
+    facebooksrc.resources = "FirebaseFacebookAuthUI/**/*.png", 'FirebaseFacebookAuthUI/**/*.xib', "FirebaseFacebookAuthUI/*.lproj"
 
     facebooksrc.dependency 'FirebaseUI/FirebaseAuthUI'
     facebooksrc.dependency 'FBSDKLoginKit', '~> 4.0'
@@ -151,7 +151,7 @@ Pod::Spec.new do |s|
     
     googlesrc.ios.source_files = 'FirebaseGoogleAuthUI/**/*.[h,m]'
     googlesrc.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h'
-    googlesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
+    googlesrc.resources = "FirebaseGoogleAuthUI/**/*.png", 'FirebaseGoogleAuthUI/**/*.xib', "FirebaseGoogleAuthUI/*.lproj"
 
     googlesrc.dependency 'FirebaseUI/FirebaseAuthUI'
     googlesrc.dependency 'GoogleSignIn', '~> 4.0'
@@ -162,7 +162,7 @@ Pod::Spec.new do |s|
     
     phonesrc.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
     phonesrc.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h'
-    phonesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj", "FirebaseAuthUI/*.json"
+    phonesrc.resources = "FirebasePhoneAuthUI/**/*.png", 'FirebasePhoneAuthUI/**/*.xib', "FirebasePhoneAuthUI/*.lproj", "FirebasePhoneAuthUI/*.json"
 
     phonesrc.dependency 'FirebaseUI/FirebaseAuthUI'
   end
@@ -171,7 +171,7 @@ Pod::Spec.new do |s|
     twittersrc.platform = :ios, '9.0'
     twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
     twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
-    twittersrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
+    twittersrc.resources = "FirebaseTwitterAuthUI/**/*.png", 'FirebaseTwitterAuthUI/**/*.xib', "FirebaseTwitterAuthUI/*.lproj"
 
     twittersrc.dependency 'FirebaseUI/FirebaseAuthUI'
     twittersrc.dependency 'TwitterKit', '~> 3.0'
