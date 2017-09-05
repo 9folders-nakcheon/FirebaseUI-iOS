@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     all.dependency 'FirebaseUI/Twittersrc'
     all.dependency 'FirebaseUI/Databasesrc'
     all.dependency 'FirebaseUI/Storagesrc'
-    all.dependency 'FirebaseUI/Authsrc'
+    all.dependency 'FirebaseUI/FirebaseAuthUI'
     all.dependency 'FirebaseUI/Facebooksrc'
     all.dependency 'FirebaseUI/Googlesrc'
     all.dependency 'FirebaseUI/Phonesrc'
@@ -126,7 +126,7 @@ Pod::Spec.new do |s|
     storagesrc.dependency 'SDWebImage', '~> 4.0'
   end
 
-  s.subspec 'Authsrc' do |authsrc|
+  s.subspec 'FirebaseAuthUI' do |authsrc|
     authsrc.platform = :ios, '8.0'
     
     authsrc.ios.source_files = 'FirebaseAuthUI/**/*.[h,m]'
