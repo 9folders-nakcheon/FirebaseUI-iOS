@@ -33,20 +33,20 @@ Pod::Spec.new do |s|
   s.subspec 'Database' do |database|
     database.platform = :ios, '8.0'
     database.vendored_frameworks = ["FirebaseUIFrameworks/FirebaseDatabaseUI/Frameworks/FirebaseDatabaseUI.framework"]
-    database.dependency 'Firebase/Database', '~> 4.0'
+    database.dependency 'Firebase/Database'
   end
 
   s.subspec 'Storage' do |storage|
     storage.platform = :ios, '8.0'
     storage.vendored_frameworks = ["FirebaseUIFrameworks/FirebaseStorageUI/Frameworks/FirebaseStorageUI.framework"]
-    storage.dependency 'Firebase/Storage', '~> 4.0'
-    storage.dependency 'SDWebImage', '~> 4.0'
+    storage.dependency 'Firebase/Storage'
+    storage.dependency 'SDWebImage'
   end
 
   s.subspec 'Auth' do |auth|
     auth.platform = :ios, '8.0'
     auth.vendored_frameworks = ["FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework"]
-    auth.dependency 'Firebase/Auth', '~> 4.0'
+    auth.dependency 'Firebase/Auth'
     auth.resource_bundle = {
       'FirebaseAuthUI' => ['FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/*.nib',
                            'FirebaseUIFrameworks/FirebaseAuthUI/Frameworks/FirebaseAuthUI.framework/*.lproj',
@@ -58,7 +58,7 @@ Pod::Spec.new do |s|
     facebook.platform = :ios, '8.0'
     facebook.vendored_frameworks = ["FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks/FirebaseFacebookAuthUI.framework"]
     facebook.dependency 'FirebaseUI/Auth'
-    facebook.dependency 'FBSDKLoginKit', '~> 4.0'
+    facebook.dependency 'FBSDKLoginKit'
     facebook.resource_bundle = {
       'FirebaseFacebookAuthUI' => ['FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks/FirebaseFacebookAuthUI.framework/*.nib',
                                    'FirebaseUIFrameworks/FirebaseFacebookAuthUI/Frameworks/FirebaseFacebookAuthUI.framework/*.lproj',
@@ -70,7 +70,7 @@ Pod::Spec.new do |s|
     google.platform = :ios, '8.0'
     google.vendored_frameworks = ["FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks/FirebaseGoogleAuthUI.framework"]
     google.dependency 'FirebaseUI/Auth'
-    google.dependency 'GoogleSignIn', '~> 4.0'
+    google.dependency 'GoogleSignIn'
     google.resource_bundle = {
       'FirebaseGoogleAuthUI' => ['FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks/FirebaseGoogleAuthUI.framework/*.nib',
                                  'FirebaseUIFrameworks/FirebaseGoogleAuthUI/Frameworks/FirebaseGoogleAuthUI.framework/*.lproj',
@@ -105,45 +105,45 @@ Pod::Spec.new do |s|
   ####################################################################################################################################
   # src
   ####################################################################################################################################
-  s.subspec 'FirebaseDatabaseUI' do |databasesrc|
+  s.subspec 'FirebaseDatabaseUI' do |ss|
   
-    databasesrc.platform = :ios, '8.0'
+    ss.platform = :ios, '8.0'
 
-    databasesrc.ios.source_files = 'FirebaseDatabaseUI/**/*.[h,m]'
-    databasesrc.ios.public_header_files = 'FirebaseDatabaseUI/**/*.h'
+    ss.ios.source_files = 'FirebaseDatabaseUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseDatabaseUI/**/*.h'
 
-    databasesrc.dependency 'Firebase/Database', '~> 4.0'
+    ss.dependency 'Firebase/Database'
   end
 
-  s.subspec 'FirebaseStorageUI' do |storagesrc|
-    storagesrc.platform = :ios, '8.0'
+  s.subspec 'FirebaseStorageUI' do |ss|
+    ss.platform = :ios, '8.0'
     
-    storagesrc.ios.source_files = 'FirebaseStorageUI/**/*.[h,m]'
-    storagesrc.ios.public_header_files = 'FirebaseStorageUI/**/*.h'
+    ss.ios.source_files = 'FirebaseStorageUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseStorageUI/**/*.h'
 
-    storagesrc.dependency 'Firebase/Storage', '~> 4.0'
-    storagesrc.dependency 'SDWebImage', '~> 4.0'
+    ss.dependency 'Firebase/Storage'
+    ss.dependency 'SDWebImage'
   end
 
-  s.subspec 'FirebaseAuthUI' do |authsrc|
-    authsrc.platform = :ios, '8.0'
+  s.subspec 'FirebaseAuthUI' do |ss|
+    ss.platform = :ios, '8.0'
     
-    authsrc.ios.source_files = 'FirebaseAuthUI/**/*.[h,m]'
-    authsrc.ios.public_header_files = 'FirebaseAuthUI/**/*.h'
-    authsrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
+    ss.ios.source_files = 'FirebaseAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseAuthUI/**/*.h'
+    ss.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
-    authsrc.dependency 'Firebase/Auth', '~> 4.0'
+    ss.dependency 'Firebase/Auth'
   end
 
-  s.subspec 'FirebaseFacebookAuthUI' do |facebooksrc|
-    facebooksrc.platform = :ios, '8.0'
+  s.subspec 'FirebaseFacebookAuthUI' do |ss|
+    ss.platform = :ios, '8.0'
     
-    facebooksrc.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
-    facebooksrc.ios.public_header_files = 'FirebaseFacebookAuthUI/**/*.h'
-    facebooksrc.resources = "FirebaseFacebookAuthUI/**/*.png", 'FirebaseFacebookAuthUI/**/*.xib', "FirebaseFacebookAuthUI/*.lproj"
+    ss.ios.source_files = 'FirebaseFacebookAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseFacebookAuthUI/**/*.h'
+    ss.resources = "FirebaseFacebookAuthUI/**/*.png", 'FirebaseFacebookAuthUI/**/*.xib', "FirebaseFacebookAuthUI/*.lproj"
 
-    facebooksrc.dependency 'FirebaseUI/FirebaseAuthUI'
-    facebooksrc.dependency 'FBSDKLoginKit', '~> 4.0'
+    ss.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'FBSDKLoginKit'
   end
 
   s.subspec 'FirebaseGoogleAuthUI' do |ss|
@@ -154,27 +154,27 @@ Pod::Spec.new do |s|
     ss.resources = "FirebaseGoogleAuthUI/**/*.png", 'FirebaseGoogleAuthUI/**/*.xib', "FirebaseGoogleAuthUI/*.lproj"
 
     ss.dependency 'FirebaseUI/FirebaseAuthUI'
-    ss.dependency 'GoogleSignIn', '~> 4.0'
+    ss.dependency 'GoogleSignIn'
   end
 
-  s.subspec 'FirebasePhoneAuthUI' do |phonesrc|
-    phonesrc.platform = :ios, '8.0'
+  s.subspec 'FirebasePhoneAuthUI' do |ss|
+    ss.platform = :ios, '8.0'
     
-    phonesrc.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
-    phonesrc.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h'
-    phonesrc.resources = "FirebasePhoneAuthUI/**/*.png", 'FirebasePhoneAuthUI/**/*.xib', "FirebasePhoneAuthUI/*.lproj", "FirebasePhoneAuthUI/*.json"
+    ss.ios.source_files = 'FirebasePhoneAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h'
+    ss.resources = "FirebasePhoneAuthUI/**/*.png", 'FirebasePhoneAuthUI/**/*.xib', "FirebasePhoneAuthUI/*.lproj", "FirebasePhoneAuthUI/*.json"
 
-    phonesrc.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'FirebaseUI/FirebaseAuthUI'
   end
 
-  s.subspec 'FirebaseTwitterAuthUI' do |twittersrc|
-    twittersrc.platform = :ios, '9.0'
-    twittersrc.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
-    twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
-    twittersrc.resources = "FirebaseTwitterAuthUI/**/*.png", 'FirebaseTwitterAuthUI/**/*.xib', "FirebaseTwitterAuthUI/*.lproj"
+  s.subspec 'FirebaseTwitterAuthUI' do |ss|
+    ss.platform = :ios, '9.0'
+    ss.ios.source_files = 'FirebaseTwitterAuthUI/**/*.[h,m]'
+    ss.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
+    ss.resources = "FirebaseTwitterAuthUI/**/*.png", 'FirebaseTwitterAuthUI/**/*.xib', "FirebaseTwitterAuthUI/*.lproj"
 
-    twittersrc.dependency 'FirebaseUI/FirebaseAuthUI'
-    twittersrc.dependency 'TwitterKit', '~> 3.0'
+    ss.dependency 'FirebaseUI/FirebaseAuthUI'
+    ss.dependency 'TwitterKit', '~> 3.0'
   end
 
 end
