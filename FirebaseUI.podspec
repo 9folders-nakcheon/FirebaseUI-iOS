@@ -143,7 +143,7 @@ Pod::Spec.new do |s|
     facebooksrc.ios.public_header_files = 'FirebaseFacebookAuthUI/**/*.h'
     facebooksrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
-    facebooksrc.dependency 'FirebaseUI/Authsrc'
+    facebooksrc.dependency 'FirebaseUI/FirebaseAuthUI'
     facebooksrc.dependency 'FBSDKLoginKit', '~> 4.0'
   end
 
@@ -154,7 +154,7 @@ Pod::Spec.new do |s|
     googlesrc.ios.public_header_files = 'FirebaseGoogleAuthUI/**/*.h'
     googlesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
-    googlesrc.dependency 'FirebaseUI/Authsrc'
+    googlesrc.dependency 'FirebaseUI/FirebaseAuthUI'
     googlesrc.dependency 'GoogleSignIn', '~> 4.0'
   end
 
@@ -165,7 +165,7 @@ Pod::Spec.new do |s|
     phonesrc.ios.public_header_files = 'FirebasePhoneAuthUI/**/*.h'
     phonesrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj", "FirebaseAuthUI/*.json"
 
-    phonesrc.dependency 'FirebaseUI/Authsrc'
+    phonesrc.dependency 'FirebaseUI/FirebaseAuthUI'
   end
 
   s.subspec 'Twittersrc' do |twittersrc|
@@ -174,7 +174,7 @@ Pod::Spec.new do |s|
     twittersrc.ios.public_header_files = 'FirebaseTwitterAuthUI/**/*.h'
     twittersrc.resources = "FirebaseAuthUI/**/*.png", 'FirebaseAuthUI/**/*.xib', "FirebaseAuthUI/*.lproj"
 
-    twittersrc.dependency 'FirebaseUI/Authsrc'
+    twittersrc.dependency 'FirebaseUI/FirebaseAuthUI'
     twittersrc.dependency 'TwitterKit', '~> 3.0'
   end
 
